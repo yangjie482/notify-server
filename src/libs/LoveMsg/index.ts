@@ -9,7 +9,6 @@ import { goodEvening } from './goodEvening'
 dotenv.config()
 
 const { MESSAGE_TYPE } = process.env
-console.log('@@##',MESSAGE_TYPE);
 
 export default function main() {
   if (MESSAGE_TYPE === 'goodAfternoon') {

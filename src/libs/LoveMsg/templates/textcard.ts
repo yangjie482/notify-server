@@ -12,7 +12,7 @@
 import dayjs from '../../../utils/dayjs'
 
 // 相识的日子
-const start_stamp = '2021-03-26'
+const start_stamp = '2010-08-01'
 
 export const textCardTemplate = (data: TextCardTemplateProps) => {
   const {
@@ -61,7 +61,7 @@ ${tips}\n`
   }
 
   // 最高温度
-  if (+highest <= 3) {
+  if (+highest <= 5) {
     description += `
 哈喽哈喽~这里是来自崽崽的爱心提醒哦：
 今日最高温度仅为🥶 ${highest}℃，可冷可冷了~

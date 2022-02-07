@@ -101,7 +101,6 @@ class API {
   // 获取农历信息
   async getLunarDate(date: string) {
     const res = await getTian<ResLunarDateProps[]>({ url: LoveMsgURL.lunarDate, params: { date } })
-    console.log('##$$',res)
     
     return res?.[0]
   }
