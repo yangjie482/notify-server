@@ -52,7 +52,7 @@ class API {
   // 天气
   async getWeather(city_name: string): Promise<IWeatherResponseProps> {
     const res = await getTian({ url: LoveMsgURL.weather, params: { city: city_name } })
-    console.log(res)
+    // console.log(res)
     return res?.[0]
   }
 
@@ -101,6 +101,8 @@ class API {
   // 获取农历信息
   async getLunarDate(date: string) {
     const res = await getTian<ResLunarDateProps[]>({ url: LoveMsgURL.lunarDate, params: { date } })
+    console.log('##$$',res)
+    
     return res?.[0]
   }
 
