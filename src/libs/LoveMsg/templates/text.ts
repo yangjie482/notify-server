@@ -65,9 +65,6 @@ ${sayLove.content}\n`
 『每日英语（${dayjs(dayEnglish.date).format('ll')}』${dayEnglish.content}`
   }
 
-  console.log('============',text);
-  
-
   return {
     msgtype: 'text',
     text: {

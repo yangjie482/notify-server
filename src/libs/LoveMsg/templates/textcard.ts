@@ -63,9 +63,9 @@ ${tips}\n`
   // 最高温度
   if (+highest <= 5) {
     description += `
-哈喽哈喽~这里是来自崽崽的爱心提醒哦：
+哈喽哈喽~爱心提醒哦：
 今日最高温度仅为🥶 ${highest}℃，可冷可冷了~
-鱼崽崽可要注意保暖哦~\n`
+小可爱可要注意保暖哦~\n`
   }
 
   //   if (air_tips) {
@@ -92,7 +92,7 @@ ${tips}\n`
       //   url: 'https://api.lovelive.tools/api/SweetNothings',
       //   url: 'https://v1.jinrishici.com/all.svg',
       url: 'https://api.vvhan.com/api/60s', // 60s看世界
-      btntxt: 'By崽崽',
+      btntxt: 'ByLove',
     },
   }
 }

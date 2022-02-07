@@ -39,7 +39,7 @@ const goodWord = async () => {
     const template = textTemplate(data)
     console.log('goodWord', template)
 
-    // wxNotify(template)
+    wxNotify(template)
   } catch (error) {
     console.log('goodWord:err', error)
   }
@@ -53,7 +53,7 @@ const weatherInfo = async () => {
     console.log('weatherInfo', template)
 
     // 发送消息
-    // await wxNotify(template)
+    await wxNotify(template)
   }
 }
 
