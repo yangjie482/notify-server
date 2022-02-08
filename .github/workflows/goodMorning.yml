@@ -6,7 +6,7 @@ on:
   schedule:
     # `分 时 天 月 周` 时按照标准时间 北京时间=标准时间+8 18表示北京时间早上2点
     # 早上8点
-    - cron: '33 9 * * *'
+    - cron: '37 9 * * *'
 # on:
 #   push:
 #     branches:
@@ -26,8 +26,8 @@ jobs:
       #     node-version: 14
 
       # 2. 设置pnpm包管理器
-      - name: Install npm
-        uses: npm/action-setup@v2.0.1
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
         with:
           version: 6.15.1
 
@@ -36,11 +36,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node_version }}
-          cache: 'npm' # 配置缓存，优化安装性能
+          cache: 'pnpm' # 配置缓存，优化安装性能
 
       # 4. 安装依赖
       - name: Install
-        run: npm install
+        run: pnpm install
 
       # 当前模式直接执行脚本请求接口，因此不执行构建逻辑
       # - name: Build
@@ -48,7 +48,7 @@ jobs:
 
       # 5. 运行脚本
       - name: 运行脚本
-        run: npm start
+        run: pnpm start
         env:
           WX_COMPANY_ID: ${{ secrets.WX_COMPANY_ID }}
           WX_APP_ID: ${{ secrets.WX_APP_ID }}
