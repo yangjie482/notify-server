@@ -26,8 +26,8 @@ jobs:
       #     node-version: 14
 
       # 2. 设置pnpm包管理器
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2.0.1
+      - name: Install npm
+        uses: npm/action-setup@v2.0.1
         with:
           version: 6.15.1
 
@@ -36,11 +36,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node_version }}
-          cache: 'pnpm' # 配置缓存，优化安装性能
+          cache: 'npm' # 配置缓存，优化安装性能
 
       # 4. 安装依赖
       - name: Install
-        run: pnpm install
+        run: npm install
 
       # 当前模式直接执行脚本请求接口，因此不执行构建逻辑
       # - name: Build
@@ -48,7 +48,7 @@ jobs:
 
       # 5. 运行脚本
       - name: 运行脚本
-        run: pnpm start
+        run: npm start
         env:
           WX_COMPANY_ID: ${{ secrets.WX_COMPANY_ID }}
           WX_APP_ID: ${{ secrets.WX_APP_ID }}
